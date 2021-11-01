@@ -1,0 +1,112 @@
+body{
+    background-repeat: repeat;
+    background-image: url("../03/L03/task_material/images/bg.png");
+    font-family: sans-serif;
+}
+
+main{
+    width: 800px;
+    height: auto;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav{
+    position: sticky;
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    float: right;  
+    margin-right: 200px;
+    
+    z-index: 200;
+}
+
+a:hover{
+    color:#b63514;
+}
+
+#Kreis{
+    width: 800px;
+    height: 800px;
+    background-color: #b63514;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    position: relative;
+    top: -500px;;
+    z-index: 100;
+    overflow: visible;
+}
+
+.active{
+    color: #b63514;
+}
+
+.img{
+    width: 800px;
+    height: auto;
+}
+
+#Text{
+
+    width: 200px;
+    height: auto;
+    color: url("../03/L03/task_material/images/bg.png");
+    background-repeat: space;
+}
+
+h1{
+    background-color: url("../03/L03/task_material/images/bg.png");
+    font-size: 250px;
+    letter-spacing: -32px;
+    position: static;
+
+    bottom: -200px;
+    z-index: 200;
+}
+
+h2{
+    mask-image: url("../03/L03/task_material/images/bg.png");
+    mask-repeat: space;
+    z-index: 200;
+
+}
+
+h3{
+    color: #b63514;
+    font-size: 20px;
+}
+
+input{
+    color:white;
+    background-color:rgba(197,197,197,255);
+    padding-left: 8px;
+    margin: 2px;
+    border: none;
+}
+
+#textarea{
+    border: none;
+    background-color: rgba(197,197,197,255);
+    padding-left: 8px;
+    margin: 2px ;
+    font-family: sans-serif;
+    color: white;
+}
+
+form p{
+    color:rgba(197,197,197,255);
+    font-size: 12px;
+}
+
+#absenden{
+    background-color: rgba(197,197,197,255);
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
