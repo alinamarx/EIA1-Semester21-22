@@ -1,0 +1,59 @@
+body{
+    background-image: url(../L04/task_material_winter/Station_1_Positionierung/images/bg.png);
+}
+
+/*navigation*/
+nav{
+    background-color: rgb(1, 114, 48);
+    color: white;
+    font-size: 23px;
+    line-height: 28px;
+    display: block;
+    float: right;
+    position: static;
+    padding: 6px;
+    border-radius: 6px 6px 6px 6px; 
+    z-index: 100; 
+}
+a{
+    color:floralwhite;
+    text-decoration: none;
+}
+a.active{
+    color:yellowgreen;
+}
+a:hover{
+    color: yellowgreen;
+}
+
+/*wrapper*/
+div.wrapper{
+    background-image: url(../L04/task_material_winter/Station_1_Positionierung/images/wrapperbg.png);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    width: 600px;
+    height: 400px;
+}
+.busch{
+    position: absolute;
+    top: -60px;
+    left: -70px;
+    z-index: 20;
+}
+.pinguin{
+    position: absolute;
+    top: 210px;
+    left: 470px;
+    z-index: 20;
+}
+.text{
+    color: white;
+    position: relative;
+    left: 60px;
+    top: 60px;
+    z-index: 0;
+
+}

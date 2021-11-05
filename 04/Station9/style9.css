@@ -1,0 +1,90 @@
+body{
+    background-image: url(../L04/task_material_winter/Station_9_Animation/images/bg.png);
+}
+
+/*navigation*/
+nav{
+    background-color:rgb(224, 42, 42);
+    font-size: 23px;
+    line-height: 28px;
+    display: block;
+    float: right;
+    position: static;
+    padding: 6px;
+    border-radius: 6px 6px 6px 6px;
+    z-index: 200; 
+}
+a{
+    color:floralwhite;
+    text-decoration: none;
+}
+a.active{
+    color: yellow;
+}
+a:hover{
+    color: yellow;
+}
+
+
+/*wrapper*/
+.wrapper{
+    background-image: url(../L04/task_material_winter/Station_9_Animation/images/wrapperbg.png);
+    width: 600px;
+    height: 400px;
+    display:block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.text{
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 55px;
+    z-index: 50;
+}
+.banderole{
+    position: absolute;
+    top: 277px;
+    left: 372px;
+    z-index: 200;
+}
+
+/*Animation*/
+#snow1{
+    position: absolute;
+    top: 3px;
+    left: 20px;
+    animation-name: Snow;
+    animation-timing-function: linear;
+    animation-duration: 4s ;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+#snow2{
+    position: absolute;
+    top: 3px;
+    left: 360px;
+    animation-name: Snow;
+    animation-timing-function: linear;
+    animation-duration: 3.5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+#snow3{
+    position: absolute;
+    top: 3px;
+    left: 440px;
+    animation-name: Snow;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Snow{
+    from {top: 3px}
+    to {top: 350px;}
+}

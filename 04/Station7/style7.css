@@ -1,0 +1,85 @@
+body{
+    background-image: url(../L04/task_material_winter/Station_7_Videos/images/bg.png);
+}
+
+/*navigation*/
+nav{
+    background-color: rgb(2, 114, 39);
+    font-size: 23px;
+    line-height: 28px;
+    display: block;
+    float: right;
+    position: static;
+    padding: 6px;
+    border-radius: 6px 6px 6px 6px; 
+    z-index: 100; 
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+a.active{
+    color:yellowgreen;
+}
+a:hover{
+    color: yellowgreen;
+}
+
+/*wrapper*/
+.wrapper{
+    background-image: url(../L04/task_material_winter/Station_7_Videos/images/container.png);
+    width: 600px;
+    height: 400px;
+    display:block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.text{
+    color: white;
+    position: absolute;
+    top: 140px;
+    left: 60px;
+    z-index: 50;
+}
+
+/*Images*/
+.plant{
+    position: absolute;
+    left: -70px;
+    top: -60px;
+}
+.gifts{
+    position: absolute;
+    left: 365px;
+    top: 275px;
+    z-index: 100;
+}
+
+/*Animation: tree*/
+.burning{
+    position: absolute;
+    top: 25px;
+    left: 325px;
+    z-index: 10;
+}
+
+/*Animation: stars*/
+#star1{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+#star2{
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+#star3{
+    position: absolute;
+    top: 80px;
+    left: 350px;
+    z-index: 200;
+}

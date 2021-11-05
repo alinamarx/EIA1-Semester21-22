@@ -1,0 +1,84 @@
+body{
+    background-image:url(..//L04/task_material_winter/Station_3_Hover/images/bg.png)
+}
+
+/*navigation*/
+nav{
+    background-color: darkblue;
+    font-size: 23px;
+    line-height: 28px;
+    display: block;
+    float: right;
+    position: static;
+    padding: 6px;
+    border-radius: 6px 6px 6px 6px; 
+    z-index: 100; 
+}
+a{
+    color:floralwhite;
+    text-decoration: none;
+}
+a.active{
+    color: cornflowerblue;
+}
+a:hover{
+    color: cornflowerblue;
+}
+
+/*wrapper*/
+.wrapper{
+    background-image: url(..//L04/task_material_winter/Station_3_Hover/images/wrapperbg.png);
+    width: 600px;
+    height: 400px;
+    display:block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.text{
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 45px;
+}
+
+/*Sterne: Positionierung*/
+.Stern1{
+    position: absolute;
+    top: 210px;
+    left: 50px;
+}
+.Stern2{
+    position: absolute;
+    top: 140px;
+    left: 150px;
+}
+.Stern3{
+    position: absolute;
+    top: 270px;
+    left: 250px;
+}
+.Stern4{
+    position: absolute;
+    top: 200px;
+    left: 420px;
+}
+
+/*Sterne: hover*/
+.hover{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.img:hover{
+    opacity: 0;
+}
+.hover:hover{
+    opacity: 1;
+}

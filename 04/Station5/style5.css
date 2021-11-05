@@ -1,0 +1,55 @@
+body{
+    background-image: url(../L04/task_material_winter/Station_5_Forms/images/bg.png);
+}
+
+/*navigation*/
+nav{
+    background-color: darkblue;
+    font-size: 23px;
+    line-height: 28px;
+    display: block;
+    float: right;
+    position: static;
+    padding: 6px;
+    border-radius: 6px 6px 6px 6px; 
+    z-index: 100; 
+}
+a{
+    color:floralwhite;
+    text-decoration: none;
+}
+a.active{
+    color: cornflowerblue;
+}
+a:hover{
+    color: cornflowerblue;
+}
+
+/*wrapper*/
+.wrapper{
+    background-image: url(../L04/task_material_winter/Station_5_Forms/images/wrapperbg.png);
+    width: 600px;
+    height: 400px;
+    display:block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/*form*/
+h1{
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+form{
+    color: white;
+    position: absolute;
+    top: 122px;
+    left: 40px;
+}
+
+
