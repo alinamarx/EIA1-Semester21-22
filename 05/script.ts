@@ -55,7 +55,6 @@ var rel_AUS_ww : number = AUS18/ ww18 *100
 var AUS_percentage : number = (AUS18-AUS08)/AUS08 *100
 var AUS_absolute : number = AUS18-AUS08
 
-
 /*Console*/
 console.log ('Die Emission von Europa ist: ' + EU18 + 'kg CO2')
 console.log ('Relativ zur Gesamtemission der Welt verursacht Europa damit ' + rel_EU_ww + '%')
