@@ -27,32 +27,32 @@ var ww18 : number = Africa18 + SA18 + EU18 + NA18 + Asia18 + AUS18
 
 /*calc Africa*/
 var rel_Africa_ww : number = Africa18/ ww18 *100
-var Africa_percentage : number = (Africa18-Africa08)/ Africa08 *100
+var Africa_percentage : number = (Africa18-Africa08)-1/ Africa08 *100
 var Africa_absolute : number = Africa18-Africa08
 
 /*calc South America*/
 var rel_SA_ww : number = SA18/ ww18 *100
-var SA_percentage : number = (SA18-SA08)/SA08 *100
+var SA_percentage : number = (SA18-SA08)-1/SA08 *100
 var SA_absolute : number = SA18-SA08
 
 /*calc Europe*/
 var rel_EU_ww : number = EU18/ ww18 *100
-var EU_percentage : number = (EU18-EU08)/EU08 *100
+var EU_percentage : number = (EU18-EU08)-1/EU08 *100
 var EU_absolute : number = EU18-EU08
 
 /*calc North America*/
 var rel_NA_ww : number = NA18 / ww18 *100
-var NA_percentage : number = (NA18-NA08)/ NA08 *100
+var NA_percentage : number = (NA18-NA08)-1/ NA08 *100
 var NA_absolute : number = NA18-NA08
 
 /*calc Asia*/
 var rel_Asia_ww : number = Asia18/ ww18 *100
-var Asia_percentage : number = (Asia18-Asia08)/Asia08 *100
+var Asia_percentage : number = (Asia18-Asia08)-1/Asia08 *100
 var Asia_absolute : number = Asia18-Asia08
 
 /*calc Australia*/
 var rel_AUS_ww : number = AUS18/ ww18 *100
-var AUS_percentage : number = (AUS18-AUS08)/AUS08 *100
+var AUS_percentage : number = (AUS18-AUS08)-1/AUS08 *100
 var AUS_absolute : number = AUS18-AUS08
 
 /*Console*/
