@@ -62,30 +62,25 @@ console.log ('Relativ zur Gesamtemission der Welt verursacht Europa damit ' + re
 console.log ('Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um ' + EU_percentage + '% verändert')
 console.log ('2018 im Vergleich zu 2008 sind das ' + EU_absolute + 'kg CO2')
 
-
 console.log ('Die Emission von Nordamerika ist: " + NA18 + "kg CO2')
 console.log ('Relativ zur Gesamtemission der Welt verursacht Nordamerika damit ' + rel_NA_ww + '%')
 console.log ('Für Nordamerika hat sich 2018 im Vergleich zu 2008 die Emission um ' + NA_percentage + '% verändert')
 console.log ('2018 im Vergleich zu 2008 sind das ' + NA_absolute + 'kg CO2')
-
 
 console.log ('Die Emission von Südamerika ist: ' + SA18 + 'kg CO2')
 console.log ('Relativ zur Gesamtemission der Welt verursacht Südamerika damit ' + rel_SA_ww + '%')
 console.log ('Für Südmamerika hat sich 2018 im Vergleich zu 2008 die Emission um ' + SA_percentage + '% verändert')
 console.log ('2018 im Vergleich zu 2008 sind das ' + SA_absolute + 'kg CO2')
 
-
 console.log ('Die Emission von Afrika ist: ' + Africa18 + 'kg CO2')
 console.log ('Relativ zur Gesamtemission der Welt verursacht Afrika damit ' + rel_Africa_ww + '%')
 console.log ('Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um ' + Africa_percentage + '% verändert')
 console.log ('2018 im Vergleich zu 2008 sind das ' + Africa_absolute + 'kg CO2')
 
-
 console.log ('Die Emission von Asien ist: ' + Asia18 + 'kg CO2')
 console.log ('Relativ zur Gesamtemission der Welt verursacht Asien damit ' + rel_Asia_ww + '%')
 console.log ('Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um ' + Asia_percentage + '%')
 console.log ('2018 im Vergleich zu 2008 sind das ' + Asia_absolute + 'kg CO2')
-
 
 console.log ('Die Emission von Australien ist: ' + AUS18 + 'kg CO2')
 console.log ('Relativ zur Gesamtemission der Welt verursacht Australien damit ' + rel_AUS_ww + '%')
