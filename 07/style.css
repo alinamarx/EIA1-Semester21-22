@@ -1,0 +1,102 @@
+body{
+    background-color: #000000;
+}
+
+/*Drumpad*/
+#drumpad{
+    width: 465px;
+    height: 465px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 6px;
+}
+div>div{
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    border: 2px;
+    border-style: outset;
+}
+
+/*Gestaltung Buttons*/
+#button1{
+    background-color: #378BEE;
+    border-color: #70AFFB;
+}
+#button1:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button2{
+    background-color: #378BEE;
+    border-color: #70AFFB;
+}
+#button2:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button3{
+    background-color: #378BEE;
+    border-color: #70AFFB;
+}
+#button3:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button4{
+    background-color: #F72F97;
+    border-color: #FE75BF;
+}
+#button4:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button5{
+    background-color: #F72F97;
+    border-color: #FE75BF;
+}
+#button5:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button6{
+    background-color: #F72F97;
+    border-color:#FE75BF ;
+}
+#button6:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button7{
+    background-color: #F72F97;
+    border-color: #FE75BF;
+}
+#button7:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button8{
+    background-color: #DE8520;
+    border-color: #F4E078;
+}
+#button8:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button9{
+    background-color: #DE8520;
+    border-color: #F4E078;
+}
+#button9:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+
+/*Positionerung Play-Button*/
+img{
+    position: relative;    
+    left: 160px;
+    width: 150px;
+    height: 150px;
+}
