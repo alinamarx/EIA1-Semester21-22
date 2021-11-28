@@ -55,11 +55,12 @@ let arraylength : number = drummachine.length
 
 function playBeat(){
 
-    /* funktioniert bei mir leider nicht
+    /* 
     setInterval(function(){
-        drummachine[key].play()
+        var beat: HTMLAudioELement = new Audio(drummachine [key]);
+        beat.play();
         key++;
-        if (key>arraylength){key = 0}
+        if (key>arraylength) key = 0
     },500)
     */
 
