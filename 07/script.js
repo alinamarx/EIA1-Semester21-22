@@ -1,14 +1,14 @@
 /*Soundeffects als Variablen zur Verfügung stellen*/
-var sound1 = new Audio('../L07/task-material/assets/A.mp3');
-var sound2 = new Audio('B.mp3');
-var sound3 = new Audio('F.mp3');
-var sound4 = new Audio('G.mp3');
-var sound5 = new Audio('hihat.mp3');
-var sound6 = new Audio('kick.mp3');
-var sound7 = new Audio('laugh-1.mp3');
-var sound8 = new Audio('laugh-2.mp3');
-var sound9 = new Audio('snare.mp3');
-//in Array noch zusammenfassen
+var soundA = new Audio('./L07/task_material/assets/A.mp3');
+var soundC = new Audio('./L07/task_material/assets/C.mp3');
+var soundF = new Audio('./L07/task_material/assets/F.mp3');
+var soundG = new Audio('./L07/task_material/assets/G.mp3');
+var hihat = new Audio('./L07/task_material/assets/hihat.mp3');
+var kick = new Audio('./L07/task_material/assets/kick.mp3');
+var laugh1 = new Audio('./L07/task_material/assets/laugh-1.mp3');
+var laugh2 = new Audio('./L07/task_material/assets/laugh-2.mp3');
+var snare = new Audio('./L07/task_material/assets/snare.mp3');
+//Aufgabe 7.1
 /*Abspielen der zugehörigen Sounds*/
 function playSample(samples) {
     samples.play();
@@ -16,31 +16,91 @@ function playSample(samples) {
 /*EventListener horcht auf Klick um Funktion auszuführen*/
 window.addEventListener('load', function () {
     document.querySelector('#button1').addEventListener('click', function () {
-        playSample(sound1);
+        playSample(kick);
     });
     document.querySelector('#button2').addEventListener('click', function () {
-        playSample(sound2);
+        playSample(snare);
     });
     document.querySelector('#button3').addEventListener('click', function () {
-        playSample(sound3);
+        playSample(hihat);
     });
     document.querySelector('#button4').addEventListener('click', function () {
-        playSample(sound4);
+        playSample(soundA);
     });
     document.querySelector('#button5').addEventListener('click', function () {
-        playSample(sound5);
+        playSample(soundC);
     });
     document.querySelector('#button6').addEventListener('click', function () {
-        playSample(sound6);
+        playSample(soundF);
     });
     document.querySelector('#button7').addEventListener('click', function () {
-        playSample(sound7);
+        playSample(soundG);
     });
     document.querySelector('#button8').addEventListener('click', function () {
-        playSample(sound8);
+        playSample(laugh1);
     });
     document.querySelector('#button9').addEventListener('click', function () {
-        playSample(sound9);
+        playSample(laugh2);
+    });
+});
+//Aufgabe 7.2
+var drummachine = [kick, snare, hihat];
+var key = 0;
+var arraylength = drummachine.length;
+function playBeat() {
+    /* funktioniert bei mir leider nicht
+    setInterval(function(){
+        drummachine[key].play()
+        key++;
+        if (key>arraylength){key = 0}
+    },500)
+    */
+    setInterval(function () {
+        drummachine[2].play();
+    }, 1000);
+    setInterval(function () {
+        drummachine[1].play();
+    }, 500);
+    setInterval(function () {
+        drummachine[0].play();
+    }, 250);
+}
+window.addEventListener('load', function () {
+    document.querySelector('#play').addEventListener('click', playBeat);
+});
+//Zusatzaufgabe
+window.addEventListener('load', function () {
+    document.addEventListener('keydown', function (event) {
+        if (event.key == "1") {
+            playSample(kick);
+        }
+        else if (event.key == "2") {
+            playSample(snare);
+        }
+        else if (event.key == "3") {
+            playSample(hihat);
+        }
+        else if (event.key == "4") {
+            playSample(soundA);
+        }
+        else if (event.key == "5") {
+            playSample(soundC);
+        }
+        else if (event.key == "6") {
+            playSample(soundF);
+        }
+        else if (event.key == "7") {
+            playSample(soundG);
+        }
+        else if (event.key == "8") {
+            playSample(laugh1);
+        }
+        else if (event.key == "9") {
+            playSample(laugh2);
+        }
+        else if (event.key == "0") {
+            playBeat();
+        }
     });
 });
 //# sourceMappingURL=script.js.map

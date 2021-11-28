@@ -14,73 +14,33 @@ body{
 div>div{
     width: 150px;
     height: 150px;
-    border-radius: 5px;
+    border-radius: 7px;
     border: 2px;
     border-style: outset;
 }
 
 /*Gestaltung Buttons*/
-#button1{
+#button1, #button2, #button3{
     background-color: #378BEE;
     border-color: #70AFFB;
 }
-#button1:hover{
+#button1:hover, #button2:hover, #button3:hover{
     opacity: 95%;
     border-style: inset;
 }
-#button2{
-    background-color: #378BEE;
-    border-color: #70AFFB;
-}
-#button2:hover{
-    opacity: 95%;
-    border-style: inset;
-}
-#button3{
-    background-color: #378BEE;
-    border-color: #70AFFB;
-}
-#button3:hover{
-    opacity: 95%;
-    border-style: inset;
-}
-#button4{
+#button4, #button5, #button6, #button7{
     background-color: #F72F97;
     border-color: #FE75BF;
 }
-#button4:hover{
+#button4:hover, #button5:hover, #button6:hover, #button7:hover{
     opacity: 95%;
     border-style: inset;
 }
-#button5{
-    background-color: #F72F97;
-    border-color: #FE75BF;
-}
-#button5:hover{
-    opacity: 95%;
-    border-style: inset;
-}
-#button6{
-    background-color: #F72F97;
-    border-color:#FE75BF ;
-}
-#button6:hover{
-    opacity: 95%;
-    border-style: inset;
-}
-#button7{
-    background-color: #F72F97;
-    border-color: #FE75BF;
-}
-#button7:hover{
-    opacity: 95%;
-    border-style: inset;
-}
-#button8{
+#button8, #button9{
     background-color: #DE8520;
     border-color: #F4E078;
 }
-#button8:hover{
+#button8:hover, #button9:hover{
     opacity: 95%;
     border-style: inset;
 }
