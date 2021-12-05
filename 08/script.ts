@@ -98,10 +98,12 @@ namespace L08 {
     function playstopBeat(): void {
         playingBeat = true;
         if (playingBeat) {
+            playbtn.setAttribute("class", "");
             playbtn.setAttribute("class", "fas fa-stop fa-6x");
             beatInterval = setInterval(playBeat, interval);
             playingBeat = false;
         } else {
+            playbtn.setAttribute("class", "");
             playbtn.setAttribute("class", " fas fa-play fa-6x");
             stopBeat();         
         }
