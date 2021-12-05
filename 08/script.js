@@ -84,24 +84,21 @@ var L08;
     }
     //Variablen Icons
     var drummachine = [kick, snare, hihat, kick];
-    var playingBeat = false;
+    var pausingBeat = false;
     var interval = 220;
     var key = 0;
-    var keyloop = 0;
     var beatInterval;
-    var playbtn = document.querySelector("#playStop");
     //Der PlayButton switcht bei Klick Funktion und Aussehen
     function playstopBeat() {
-        playingBeat = true;
-        if (playingBeat) {
-            playbtn.setAttribute("class", "");
-            playbtn.setAttribute("class", "fas fa-stop fa-6x");
+        if (!pausingBeat) {
+            document.querySelector("#playStop").setAttribute("class", "");
+            document.querySelector("#playStop").setAttribute("class", "fas fa-stop fa-6x");
             beatInterval = setInterval(playBeat, interval);
-            playingBeat = false;
+            pausingBeat = true;
         }
         else {
-            playbtn.setAttribute("class", "");
-            playbtn.setAttribute("class", " fas fa-play fa-6x");
+            document.querySelector("#playStop").setAttribute("class", "");
+            document.querySelector("#playStop").setAttribute("class", " fas fa-play fa-6x");
             stopBeat();
         }
     }
@@ -109,7 +106,7 @@ var L08;
         drummachine[key].play();
         key++;
         if (key >= drummachine.length) {
-            key = keyloop;
+            key = 0;
         }
     }
     function stopBeat() {
@@ -121,8 +118,6 @@ var L08;
     function Remix() {
         drummachine.push(kick, snare, hihat, kick);
         interval = Math.floor((Math.random() * 1000) + 1);
-        key = Math.floor((Math.random() * 4));
-        key = keyloop;
         playstopBeat();
     }
 })(L08 || (L08 = {}));

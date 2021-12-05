@@ -85,26 +85,23 @@ namespace L08 {
     //Variablen Icons
     let drummachine: HTMLAudioElement[] = [kick, snare, hihat, kick];
 
-    var playingBeat: boolean = false;
+    var pausingBeat: boolean = false;
     let interval: number = 220;
     var key: number = 0;
-    var keyloop: number = 0;
 
     var beatInterval: number;
-    let playbtn: HTMLElement = document.querySelector("#playStop");
     
 
     //Der PlayButton switcht bei Klick Funktion und Aussehen
     function playstopBeat(): void {
-        playingBeat = true;
-        if (playingBeat) {
-            playbtn.setAttribute("class", "");
-            playbtn.setAttribute("class", "fas fa-stop fa-6x");
+        if (!pausingBeat) {
+            document.querySelector("#playStop").setAttribute("class", "");
+            document.querySelector("#playStop").setAttribute("class", "fas fa-stop fa-6x");
             beatInterval = setInterval(playBeat, interval);
-            playingBeat = false;
+            pausingBeat = true;
         } else {
-            playbtn.setAttribute("class", "");
-            playbtn.setAttribute("class", " fas fa-play fa-6x");
+            document.querySelector("#playStop").setAttribute("class", "");
+            document.querySelector("#playStop").setAttribute("class", " fas fa-play fa-6x");
             stopBeat();         
         }
       
@@ -114,7 +111,7 @@ namespace L08 {
     function playBeat (): void { 
         drummachine[key].play();
         key++;
-        if (key >= drummachine.length) { key = keyloop; }
+        if (key >= drummachine.length) { key = 0; }
     }
 
     function stopBeat(): void {
@@ -127,11 +124,7 @@ namespace L08 {
 
     function Remix (): void {
         drummachine.push (kick, snare, hihat, kick);
-
         interval = Math.floor((Math.random() * 1000) + 1);
-        key = Math.floor((Math.random() * 4));
-        key = keyloop;
-
         playstopBeat();
     }
 
