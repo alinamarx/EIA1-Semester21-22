@@ -50,8 +50,8 @@ window.addEventListener ('load', function (){
 
 //Aufgabe 7.2
 let drummachine: HTMLAudioElement [] = [kick, snare, hihat];
-let key: number = 0
-let arraylength : number = drummachine.length
+/*let key: number = 0
+let arraylength : number = drummachine.length*/
 
 function playBeat(){
 

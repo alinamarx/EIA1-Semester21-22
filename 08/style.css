@@ -1,0 +1,74 @@
+body{
+    background-color: #000000;
+}
+
+/*Positonierung Drumpad*/
+#drumpad{
+    width: 465px;
+    height: 465px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 6px;
+    z-index: 500;
+}
+div>div{
+    width: 150px;
+    height: 150px;
+    border-radius: 7px;
+    border: 2px;
+    border-style: outset;
+}
+
+/*Gestaltung Buttons*/
+#button1, #button2, #button3{
+    background-color: #378BEE;
+    border-color: #70AFFB;
+}
+#button1:hover, #button2:hover, #button3:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button4, #button5, #button6, #button7{
+    background-color: #F72F97;
+    border-color: #FE75BF;
+}
+#button4:hover, #button5:hover, #button6:hover, #button7:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+#button8, #button9{
+    background-color: #DE8520;
+    border-color: #F4E078;
+}
+#button8:hover, #button9:hover{
+    opacity: 95%;
+    border-style: inset;
+}
+
+
+/*Positionerung der Icons*/
+#icons{
+    color: #ffffff;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    left: 485px;
+    top: 30px;
+}
+#remix, #playStop, #delete{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+
+/*Link zum Flow-Chart*/
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #F4E078;
+}
+a:hover{
+    color: #FE75BF;
+}

@@ -45,14 +45,15 @@ window.addEventListener('load', function () {
 });
 //Aufgabe 7.2
 var drummachine = [kick, snare, hihat];
-var key = 0;
-var arraylength = drummachine.length;
+/*let key: number = 0
+let arraylength : number = drummachine.length*/
 function playBeat() {
-    /* funktioniert bei mir leider nicht
+    /*
     setInterval(function(){
-        drummachine[key].play()
+        var beat: HTMLAudioELement = new Audio(drummachine [key]);
+        beat.play();
         key++;
-        if (key>arraylength){key = 0}
+        if (key>arraylength) key = 0
     },500)
     */
     setInterval(function () {
