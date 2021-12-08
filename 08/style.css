@@ -48,17 +48,11 @@ div>div{
 
 
 /*Positionerung der Icons*/
-#icons{
-    color: #ffffff;
-    margin: auto;
-    display: inline-block;
-    position: relative;
-    left: 485px;
-    top: 30px;
-}
 #remix, #playStop, #delete{
+    color: white;
     padding-left: 35px;
     padding-right: 35px;
+    padding-top: 20px;
 }
 
 

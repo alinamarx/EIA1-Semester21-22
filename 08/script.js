@@ -100,6 +100,7 @@ var L08;
             document.querySelector("#playStop").setAttribute("class", "");
             document.querySelector("#playStop").setAttribute("class", " fas fa-play fa-6x");
             stopBeat();
+            pausingBeat = false;
         }
     }
     function playBeat() {
@@ -114,6 +115,8 @@ var L08;
     }
     function deleteBeat() {
         drummachine = [];
+        pausingBeat = true;
+        playstopBeat();
     }
     function Remix() {
         drummachine.push(kick, snare, hihat, kick);

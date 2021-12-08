@@ -102,7 +102,8 @@ namespace L08 {
         } else {
             document.querySelector("#playStop").setAttribute("class", "");
             document.querySelector("#playStop").setAttribute("class", " fas fa-play fa-6x");
-            stopBeat();         
+            stopBeat(); 
+            pausingBeat = false;        
         }
       
     }
@@ -120,6 +121,8 @@ namespace L08 {
 
     function deleteBeat (): void {
         drummachine = [];
+        pausingBeat = true;
+        playstopBeat();
     }
 
     function Remix (): void {
