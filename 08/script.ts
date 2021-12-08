@@ -57,7 +57,6 @@ namespace L08 {
     function deleteBeat (): void {
         drummachine = [];
         pausingBeat = true;
-        playstopBeat();
     }
 
     function Remix (): void {
