@@ -12,7 +12,61 @@ namespace L08 {
     var snare: HTMLAudioElement = new Audio("./L08/task_material/assets/snare.mp3");
 
 
-    // 
+    //Abspielen der zugehörigen Sounds
+    function playSample(samples: HTMLAudioElement): void {
+            samples.play();
+    }
+
+    //Variablen Icons
+    let drummachine: HTMLAudioElement[] = [kick, snare, hihat, kick];
+
+    var pausingBeat: boolean = false;
+    let interval: number = 220;
+    var key: number = 0;
+
+    var beatInterval: number;
+    
+
+    //Der PlayButton switcht bei Klick Funktion und Aussehen
+    function playstopBeat(): void {
+        if (!pausingBeat) {
+            document.querySelector("#playStop").setAttribute("class", "");
+            document.querySelector("#playStop").setAttribute("class", "fas fa-stop fa-6x");
+            beatInterval = setInterval(playBeat, interval);
+            pausingBeat = true;
+        } else {
+            document.querySelector("#playStop").setAttribute("class", "");
+            document.querySelector("#playStop").setAttribute("class", " fas fa-play fa-6x");
+            stopBeat(); 
+            pausingBeat = false;        
+        }
+      
+    }
+
+    
+    function playBeat (): void { 
+        drummachine[key].play();
+        key++;
+        if (key >= drummachine.length) { key = 0; }
+    }
+
+    function stopBeat(): void {
+        clearInterval(beatInterval);
+    }
+
+    function deleteBeat (): void {
+        drummachine = [];
+        pausingBeat = true;
+        playstopBeat();
+    }
+
+    function Remix (): void {
+        drummachine.push (kick, snare, hihat, kick);
+        interval = Math.floor((Math.random() * 1000) + 1);
+        playstopBeat();
+    }
+
+    // EventListener horcht auf Klicks im Document
     window.addEventListener("load", function (): void {
         document.querySelector("#button1").addEventListener("click", function (): void {
             playSample(kick);
@@ -75,60 +129,5 @@ namespace L08 {
             }
         });
     });
-
-
-    //Abspielen der zugehörigen Sounds
-    function playSample(samples: HTMLAudioElement): void {
-            samples.play();
-    }
-
-    //Variablen Icons
-    let drummachine: HTMLAudioElement[] = [kick, snare, hihat, kick];
-
-    var pausingBeat: boolean = false;
-    let interval: number = 220;
-    var key: number = 0;
-
-    var beatInterval: number;
-    
-
-    //Der PlayButton switcht bei Klick Funktion und Aussehen
-    function playstopBeat(): void {
-        if (!pausingBeat) {
-            document.querySelector("#playStop").setAttribute("class", "");
-            document.querySelector("#playStop").setAttribute("class", "fas fa-stop fa-6x");
-            beatInterval = setInterval(playBeat, interval);
-            pausingBeat = true;
-        } else {
-            document.querySelector("#playStop").setAttribute("class", "");
-            document.querySelector("#playStop").setAttribute("class", " fas fa-play fa-6x");
-            stopBeat(); 
-            pausingBeat = false;        
-        }
-      
-    }
-
-    
-    function playBeat (): void { 
-        drummachine[key].play();
-        key++;
-        if (key >= drummachine.length) { key = 0; }
-    }
-
-    function stopBeat(): void {
-        clearInterval(beatInterval);
-    }
-
-    function deleteBeat (): void {
-        drummachine = [];
-        pausingBeat = true;
-        playstopBeat();
-    }
-
-    function Remix (): void {
-        drummachine.push (kick, snare, hihat, kick);
-        interval = Math.floor((Math.random() * 1000) + 1);
-        playstopBeat();
-    }
 
 }
