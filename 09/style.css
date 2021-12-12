@@ -1,0 +1,98 @@
+body{
+    background-image: url(./L09/otter-clipart-svg-8.png);
+    background-size: 80px;
+    background-repeat: repeat;
+    background-color: rgb(131, 182, 189);
+    background-blend-mode: soft-light;
+}
+#ToDoApp{
+    position: relative;
+    top: 15px;
+    margin:auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*NAV*/
+a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: #ffffff;
+    text-shadow: 2px 2px rgb(65, 65, 65);
+}
+a:hover{
+    color: rgb(65, 65, 65);
+    text-shadow: 1.5px 1.5px#ffffff
+}
+
+
+/*HEADLINE*/
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(65, 65, 65);
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    text-shadow: 2px 2px#ffffff;
+}
+#totalString{
+    position: relative;
+    top: -10px;
+    color: rgb(65, 65, 65);
+    font-weight: bold;
+}
+
+/*LIST*/
+#list{
+    width: 450px;
+    position: relative;
+    left: -20px;
+    margin: auto;
+    text-align: left;
+    font-size: 16px;
+}
+input{
+    font-size: 20px;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+li{
+    list-style: none;
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;
+    background-color: #ffffff;
+    padding-left: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 20px;
+}
+
+/*ICONS*/
+.fa-circle{
+    color: #eeeeee;
+    position: relative;
+    left: -15px;
+    font-size: 40px;
+    z-index: 1000;
+}
+.fa-trash-alt{
+    color: #666666;    
+}
+.fa-check{
+    color: #000000;
+    font-size: 17px;
+    position: relative;
+    top: -8px;
+    left: -44px;
+    opacity: 0;
+}
+.notdone{
+    opacity: 0;
+}
+.done{
+    opacity: 1;
+}
