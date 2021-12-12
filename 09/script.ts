@@ -1,22 +1,22 @@
 namespace L09 {
 
-// Umwandeln der HTMLElemente in Variabeln
-let total: HTMLElement = document.getElementById("total");
-const newtask: HTMLInputElement = document.querySelector("input");
-const checkmark: HTMLElement = document.querySelector("#fa-check");
-let tasks: HTMLElement = document.querySelector("ul");
+    window.addEventListener("load", function(): void {
+    // Umwandeln der HTMLElemente in Variabeln
+    let total: HTMLElement = document.getElementById("total");
+    const newtask: HTMLInputElement = document.querySelector("input");
+    let tasks: HTMLElement = document.querySelector("ul");
 
-//Variablendeklaration
-let index: number = 0;
+    //Variablendeklaration
+    let index: number = 0;
+    let checked: boolean = false;
 
 
-window.addEventListener("load", function(): void {
     window.addEventListener("keydown", function(event: KeyboardEvent): void {
-        if (event.key === "Enter") addingTask();
+        if (event.keyCode == 13) addingTask();
     });
 
     function totalCounter(index: number): void {
-        total.innerHTML = "" + index;
+        total.innerHTML = index + " in total";
     }
 
     //Ausführung der Funktion, wenn man etwas eingibt und 'Enter' drückt
@@ -34,39 +34,45 @@ window.addEventListener("load", function(): void {
 
         //Erstellen der Listenelemente und Icons im DOM
         const circle: HTMLElement = document.createElement("i");
-        circle.classList.add("far fa-circle");
+        circle.classList.add("far");
+        li.appendChild(circle);
+        circle.classList.add("fa-circle");
         li.appendChild(circle);
         circle.addEventListener("click", checkingTask);
 
         const checkmark: HTMLElement = document.createElement("i");
-        checkmark.classList.add("fas fa-check notdone");
-        li.appendChild(checkmark);
+        checkmark.setAttribute("id", "check");
+        li.appendChild(checkmark); 
 
-        li.textContent = "" + textInput;
-        
+        const taskString: HTMLSpanElement = document.createElement("span");
+        li.appendChild(taskString);
+        taskString.textContent = "" + textInput;
+
         const trash: HTMLElement = document.createElement("i");
-        trash.classList.add("far fa-trash-alt");
-        li.appendChild(trash); 
+        trash.classList.add("far");
+        trash.classList.add("fa-trash-alt");
+        li.appendChild(trash);
+        li.insertBefore(trash, li.childNodes[2]); 
         trash.addEventListener("click", deletingTask);
 
         tasks.appendChild(li);
-    }
 
-    //Task wird bei Klick gecheckt und entcheckt
-    function checkingTask (): void {
-    if (checkmark.classList.contains("notdone")) {
-        checkmark.classList.remove("notdone");
-        checkmark.classList.add("done");
-    } else  {
-        checkmark.classList.remove("done");
-        checkmark.classList.add("notdone");
-    }
-    }
+        //Task wird bei Klick gecheckt und entcheckt
+        function checkingTask (): void {
+            if (!checked) {
+                checkmark.classList.add("fas", "fa-check");
+                checked = true;
+            } else  {
+                checkmark.setAttribute("class", "");
+                checked = false;
+            }
+        }
 
-    //Task wird gelöscht, Counter -1
-    function deletingTask (): void {
-        this.li.innerHTML = ""; 
-        totalCounter(index--);  
+        //Task wird gelöscht, Counter -1
+        function deletingTask (): void {
+            li.innerHTML = ""; 
+            totalCounter(index--);  
+        }
     }
 
 });

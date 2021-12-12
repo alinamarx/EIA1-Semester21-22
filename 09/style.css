@@ -70,29 +70,32 @@ li{
     padding-bottom: 8px;
     font-size: 20px;
 }
+li span{
+    position: relative;
+    left: -25px;
+    top: -7px;
+}
 
 /*ICONS*/
-.fa-circle{
+li .fa-circle{
     color: #eeeeee;
+    font-size: 40px;
+    z-index: 100;
     position: relative;
     left: -15px;
-    font-size: 40px;
-    z-index: 1000;
 }
 .fa-trash-alt{
-    color: #666666;    
+    color: #666666; 
+    font-size: 30px;
+    position: relative;
+    right: -290px;
+    top: -2px;
 }
-.fa-check{
+ li .fa-check, #check{
     color: #000000;
     font-size: 17px;
     position: relative;
-    top: -8px;
-    left: -44px;
-    opacity: 0;
+    left: -43px;
+    bottom: 7px;
 }
-.notdone{
-    opacity: 0;
-}
-.done{
-    opacity: 1;
-}
+
