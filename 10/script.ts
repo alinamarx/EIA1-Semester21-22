@@ -73,18 +73,16 @@ window.addEventListener("load", function(): void {
 
         //Task wird bei Klick gecheckt und entcheckt
         function checkingTask (): void {
-            if (!checked) {
-                checkmark.setAttribute("style", "opacity: 1");
+            if (checkmark.getAttribute("style") == "opacity: 0") {
                 indexOpen--;
                 indexDone++;
                 Counter(indexTotal, indexOpen, indexDone);
-                checked = true;
+                checkmark.setAttribute("style", "opacity: 1");
             } else {
-                checkmark.setAttribute("style", "opacity: 0");
                 indexOpen++;
                 indexDone--;
                 Counter(indexTotal, indexOpen, indexDone);
-                checked = false;
+                checkmark.setAttribute("style", "opacity: 0");
             }
         }
 

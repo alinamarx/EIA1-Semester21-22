@@ -104,6 +104,7 @@ li .fa-check{
     position: relative;
     left: -43px;
     bottom: 8px;
+    opacity: 0;
 }
 .fa-microphone-alt{
     color: #666666;

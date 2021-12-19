@@ -58,19 +58,17 @@ var L09;
             tasks.appendChild(li);
             //Task wird bei Klick gecheckt und entcheckt
             function checkingTask() {
-                if (!checked) {
-                    checkmark.setAttribute("style", "opacity: 1");
+                if (checkmark.getAttribute("style") == "opacity: 0") {
                     indexOpen--;
                     indexDone++;
                     Counter(indexTotal, indexOpen, indexDone);
-                    checked = true;
+                    checkmark.setAttribute("style", "opacity: 1");
                 }
                 else {
-                    checkmark.setAttribute("style", "opacity: 0");
                     indexOpen++;
                     indexDone--;
                     Counter(indexTotal, indexOpen, indexDone);
-                    checked = false;
+                    checkmark.setAttribute("style", "opacity: 0");
                 }
             }
             //Task wird gelöscht, total counter -1
