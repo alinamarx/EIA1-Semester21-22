@@ -90,10 +90,12 @@ window.addEventListener("load", function(): void {
         function deletingTask (): void {
             li.remove(); 
             indexTotal--;
-            if (!checked) {   //Die Task wird gelöscht, wenn sie nicht abgehakt ist -> -1 open
+            if (checkmark.getAttribute("style") == "opacity: 0") {   //Die Task wird gelöscht, wenn sie nicht abgehakt ist -> -1 open
                 indexOpen--;
+                checkmark.setAttribute("style", "opacity: 1");
             } else {          //Die Task wird gelöscht, wenn sie abgehakt ist -> -1 done
                 indexDone--;
+                checkmark.setAttribute("style", "opacity: 0");
             }
             Counter(indexTotal, indexOpen, indexDone);
         }    
